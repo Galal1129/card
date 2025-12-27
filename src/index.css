@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --purple: #2D3192;
+  --purple-2: #3d42a8;
+  --purple-dark: #1f2568;
+  --line: #2D3192;
+  --soft: #f0f1f9;
+  --gray: #4a4a4a;
+  --blue: #2D3192;
+  --radius: 16px;
+  --radius-sm: 12px;
+  --bw: 2.5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #efefef;
+  font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: #111;
+  padding: 18px;
+  direction: rtl;
+}
