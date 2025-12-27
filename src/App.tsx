@@ -23,9 +23,9 @@ interface ReceiptData {
 
 const sampleData: ReceiptData = {
   documentNumber: '31021',
-  date: '2025-09-12',
+  date: '2025-12-27',
   time: '08:24:16 م 12/09/2025',
-  clientName: 'هشام فؤاد سعيد قاسم الراسي',
+  clientName: 'علي هادي علي الرازحي',
   accountNumber: '1231132',
   accountAmount: 400,
   accountCurrency: 'دولار أزرق',
@@ -49,8 +49,15 @@ function App() {
     <div className="paper">
       <div className="frame">
         <div className="headerWave">
-          <svg className="waveSvg" viewBox="0 0 900 140" preserveAspectRatio="none">
-            <path d="M0,0 L0,100 Q150,60 300,80 T600,80 T900,100 L900,0 Z" fill="#7a1ea1" />
+          <svg className="waveSvg" viewBox="0 0 900 100" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style={{ stopColor: '#8B2FB8', stopOpacity: 1 }} />
+                <stop offset="100%" style={{ stopColor: '#3949AB', stopOpacity: 1 }} />
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="900" height="100" fill="url(#headerGradient)" />
+            <path d="M0,70 Q150,50 300,65 T600,65 T900,70 L900,100 L0,100 Z" fill="url(#headerGradient)" opacity="0.3" />
           </svg>
 
           <div className="headerContent">
@@ -161,14 +168,7 @@ function App() {
 
           <div className="qrContainer">
             <div className="qrBox">
-              <img
-                src="/qr.png"
-                alt="QR"
-                onError={(e) => {
-                  e.currentTarget.insertAdjacentHTML('afterend', '<div class="qrFallback">QR</div>');
-                  e.currentTarget.remove();
-                }}
-              />
+              <div className="qrFallback">QR</div>
             </div>
           </div>
         </div>
